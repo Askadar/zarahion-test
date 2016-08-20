@@ -9,16 +9,16 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-var pgp = require("pg-promise")(/*options*/);
-var db = pgp("postgres://postgres:root@localhost:5432/postgres");
+// var pgp = require("pg-promise")(/*options*/);
+// var db = pgp("postgres://postgres:root@localhost:5432/postgres");
 
-db.one("SELECT $1 AS value", 123)
-    .then(function (data) {
-        console.log("DATA:", data.value);
-    })
-    .catch(function (error) {
-        console.log("ERROR:", error);
-    });
+// db.one("SELECT $1 AS value", 123)
+//     .then(function (data) {
+//         console.log("DATA:", data.value);
+//     })
+//     .catch(function (error) {
+//         console.log("ERROR:", error);
+//     });
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jsx');
